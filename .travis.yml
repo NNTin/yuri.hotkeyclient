@@ -1,2 +1,13 @@
 language: csharp
 solution: YuriClient.sln
+
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: BvRddzGhGelQEqI6r+ahaWE5FgwMoAZlWIddMYk8D0PU8mQD9ZYGegaPWd9zuJpXESGymUBZERpiUbJTJAoaAdCgZUiEGP7uS4wEi6MzD/JPN67GLVyjSSsprHP1JLihNwyvl0iqm1D4Ia25e/4/rx2vZYmV/GQMZ2djaAeppWMaYVxydXyl+S+oRkHK8el1a38p9bZqljEsrbZ7Kj2jlnvP49wU7jAbSX/yh1QdwdTjvqPDx2iXcCufDFPl9paHmIel75MuUr25A4BBXDEMEv0EtzKZx++PYLpX67MSq1NTIGj0BBW1/HNEpDnz5WTOhQ+55sid/kERih2N/UpQckwv4zrVlvvZsh6dIK6XwiXfjQPvKdJdvERZFGRT5Q4LmUtcHfPBzU4db7nxfh00ErkyiZPy8/x8uvJZcBzcrTfcdVxU8TaJ5r+cW5ZztQ/+FakD2Hlg/l5Gw4DkefY9MGWi9VOz/9tRYIenPJ+2LTmYO6H2zuTnrPGOJGuCRj2iZrBYh6h+G1pZRYAvhSzVkA26r4X6dofas125p72AKLcFvoFcbB5zuNkGJLtBZxXMK2tE7RIPFPoLWJg0Nd0wxt07FXu+nhBjBWsUwM/bHFX2xbQgneAPA8GHxa+h2SpPKFtXMSBhUTgxqb73Gvg4XQ9QvEX/HsXBz81ImSFZWsg=
+  file: 
+    - YuriClient/bin/Release/YuriClient.exe
+    - YuriClient/bin/Release/Newtonsoft.Json.dll
+  on:
+    tag: true
